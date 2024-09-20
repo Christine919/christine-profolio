@@ -9,16 +9,16 @@ import project_4 from '../assets/project_4.png';
 
 const projects = [
   {
-    title: 'Customer Management System',
-    description: 'This is a CMS web for managing customers, orders, appointments, and more for beauty businesses.',
-    image: project_1,
-    link: 'https://customer-management-system-livid.vercel.app/',
-  },
-  {
     title: 'Luxestay Hotel',
     description: 'A modern and elegant hotel booking platform with a sleek design, offering a seamless user experience for travelers.',
     image: project_4,
     link: 'https://luxestay-ten.vercel.app/',
+  },
+  {
+    title: 'Customer Management System',
+    description: 'This is a CMS web for managing customers, orders, appointments, and more for beauty businesses.',
+    image: project_1,
+    link: 'https://customer-management-system-livid.vercel.app/',
   },
   {
     title: 'Memory Melody ',

@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className="fixed w-full bg-white shadow-md z-50">
       <div className="container mx-auto flex justify-between items-center p-4">
-        <h1 className="text-2xl font-bold">Your Name</h1>
+        <h1 className="text-2xl font-bold">Christine</h1>
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-6">
           <Link to="hero" smooth={true} duration={500} className="cursor-pointer hover:text-blue-500">

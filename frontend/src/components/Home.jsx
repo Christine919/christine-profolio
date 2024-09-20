@@ -35,7 +35,6 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className="text-white text-lg"
         >
-          <p>Scroll down to discover more about my projects!</p>
         </motion.div>
       </div>
     </section>
