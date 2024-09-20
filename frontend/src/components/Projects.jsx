@@ -25,12 +25,6 @@ const projects = [
     image: project_3,
     link: 'https://christine919.github.io/note-keeper/',
   },
-  {
-    title: 'Another Project',
-    description: 'A simple note-keeping app built using React and Material-UI. This app allows users to create, view, and delete notes.',
-    image: project_3,
-    link: 'https://christine919.github.io/note-keeper/',
-  },
 ];
 
 const ProjectSection = () => {
