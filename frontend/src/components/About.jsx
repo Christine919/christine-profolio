@@ -1,7 +1,7 @@
 // src/components/AboutSection.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import profileImage from '../assets/profile.jpg'; // Replace with your image path
+import profile from '../assets/profile.png';
 
 const AboutSection = () => {
   return (
@@ -14,7 +14,7 @@ const AboutSection = () => {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <img src={profileImage} alt="Profile" className="rounded-lg shadow-lg" />
+          <img src={profile} alt="Profile" className="rounded-lg shadow-lg" />
         </motion.div>
         <motion.div
           className="md:w-1/2 md:pl-12 mt-8 md:mt-0"

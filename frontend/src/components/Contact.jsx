@@ -9,10 +9,10 @@ const ContactForm = () => {
 
   const onSubmit = (data) => {
     emailjs.send(
-      'YOUR_SERVICE_ID', 
-      'YOUR_TEMPLATE_ID', 
+      'service_06s9u5t', 
+      'template_3ya16ek', 
       data, 
-      'YOUR_PUBLIC_KEY'
+      'rlwzAehhe0cqH3mIp'
     )
     .then((response) => {
       console.log('SUCCESS!', response.status, response.text);
