@@ -14,6 +14,12 @@ const projects = [
     link: 'https://customer-management-system-livid.vercel.app/',
   },
   {
+    title: 'Luxestay Hotel',
+    description: 'A modern and elegant hotel booking platform with a sleek design, offering a seamless user experience for travelers.',
+    image: project_4,
+    link: 'https://luxestay-ten.vercel.app/',
+  },
+  {
     title: 'Memory Melody ',
     description: 'This is a web-based memory game where players challenge their ability to remember and repeat musical patterns.',
     image: project_2,
