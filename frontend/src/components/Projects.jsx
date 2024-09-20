@@ -1,22 +1,29 @@
-// src/components/ProjectSection.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import ProjectCard from './ProjectCard'; // We'll create this component next
+import ProjectCard from './ProjectCard'; 
+import project_1 from '../assets/project_1.png';
+import project_2 from '../assets/project_2.png';
+import project_3 from '../assets/project_3.png';
 
 const projects = [
   {
-    title: 'Project One',
-    description: 'A brief description of Project One.',
-    image: 'https://via.placeholder.com/400',
-    link: 'https://github.com/yourusername/project-one',
+    title: 'Customer Management System',
+    description: 'This is a CMS web for managing customers, orders, appointments, and more for beauty businesses.',
+    image: project_1,
+    link: 'https://customer-management-system-livid.vercel.app/',
   },
   {
-    title: 'Project Two',
-    description: 'A brief description of Project Two.',
-    image: 'https://via.placeholder.com/400',
-    link: 'https://github.com/yourusername/project-two',
+    title: 'Memory Melody ',
+    description: 'This is a web-based memory game where players challenge their ability to remember and repeat musical patterns.',
+    image: project_2,
+    link: 'https://christine919.github.io/memory-melody/',
   },
-  // Add more projects as needed
+  {
+    title: 'Note Keeper',
+    description: 'A simple note-keeping app built using React and Material-UI. This app allows users to create, view, and delete notes.',
+    image: project_3,
+    link: 'https://christine919.github.io/note-keeper/',
+  },
 ];
 
 const ProjectSection = () => {
