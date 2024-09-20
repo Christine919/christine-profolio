@@ -17,7 +17,7 @@ const Footer = () => {
             <FaWhatsapp className="w-6 h-6 hover:text-blue-500 transition" />
           </a>
         </div>
-        <p className="text-gray-600">&copy; {new Date().getFullYear()} Christine. All rights reserved.</p>
+        <p className="text-gray-600">&copy; {new Date().getFullYear()} Christiner. All rights reserved.</p>
       </div>
     </footer>
   );
