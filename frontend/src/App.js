@@ -7,10 +7,12 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import RippleBackground from './components/RippleBackground';
 
 const App = () => {
   return (
-    <div className="font-sans">
+    <div className="font-playfair">
+      <RippleBackground />
       <Header />
       <main>
         <Home />

@@ -1,0 +1,32 @@
+.ripple-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Keep it behind other elements */
+  background: radial-gradient(circle, 
+      #e0aaff, /* Light Purple */
+      #a0c4ff, /* Light Blue */
+      #9662ff, /* Light Sky Blue */
+      #1ee0ff, /* Light Cyan */
+      #85f3ff, /* Light Aquamarine */
+      #00ffcc, /* Light Teal */
+      #ffeb3b, /* Light Yellow */
+      #ff6f61  /* Light Coral */
+  );
+  animation: ripple 60s infinite ease-in-out;
+  background-size: 400% 400%;
+}
+
+@keyframes ripple {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}

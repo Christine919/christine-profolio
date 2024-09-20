@@ -43,13 +43,14 @@ const ProjectSection = () => {
     slidesToScroll: 1,
     adaptiveHeight: true,
     centerMode: true, // Center the slides
-    centerPadding: '20px', // Padding for centering
+    centerPadding: '0px', // No padding for mobile
     responsive: [
       {
         breakpoint: 640, // Mobile
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerPadding: '0px',
         },
       },
       {
@@ -57,15 +58,17 @@ const ProjectSection = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          centerMode: false,
+          centerPadding: '20px', // Add some space between cards
         },
       },
       {
-        breakpoint: 1280, // Large screens
+        breakpoint: 1280, // Laptop and larger screens
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: '30px',
+          centerMode: false,
+          centerPadding: '30px', // Extra space between cards
         },
       },
     ],
@@ -84,7 +87,7 @@ const ProjectSection = () => {
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="mx-2"> {/* Add margin around each card */}
+              <div className="mx-4"> {/* Add margin around each card */}
                 <ProjectCard project={project} />
               </div>
             </motion.div>

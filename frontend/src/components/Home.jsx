@@ -6,12 +6,12 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 relative overflow-hidden"
+      className="h-screen flex items-center justify-center relative overflow-hidden"
     >
-      <img
+       <img
         src={heroImage}
         alt="Hero Background"
-        className="absolute inset-0 object-cover w-full h-full opacity-30" // Background image
+        className="absolute inset-0 object-cover w-full h-full opacity-30"
       />
       <motion.div
         initial={{ opacity: 0, y: -50 }}

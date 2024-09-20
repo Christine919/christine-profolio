@@ -9,7 +9,7 @@ module.exports = {
         secondary: '#14171A',
       },
       fontFamily: {
-        sans: ['Roboto', 'sans-serif'],
+        playfair: ['"Playfair Display"', 'serif'],
       },
     },
   },
