@@ -19,6 +19,7 @@ const HeroSection = () => {
         transition={{ duration: 1 }}
         className="text-center text-white p-4 relative z-10"
       >
+        <h1 className='text-4xl md:text-6xl font-bold mb-8'>WELCOME</h1>
         <h2 className="text-4xl md:text-6xl font-bold mb-4 animate-bounce">Hello, I'm Christine</h2>
         <p className="text-xl md:text-2xl mb-6">A Full-Stack Developer</p>
         <a

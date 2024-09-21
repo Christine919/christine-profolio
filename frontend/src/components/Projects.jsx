@@ -39,11 +39,11 @@ const ProjectSection = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1, // Default for mobile
+    slidesToShow: 3, // Default for mobile
     slidesToScroll: 1,
     adaptiveHeight: true,
     centerMode: true, // Center the slides
-    centerPadding: '0px', // No padding for mobile
+    centerPadding: '50px', // No padding for mobile
     responsive: [
       {
         breakpoint: 640, // Mobile
@@ -77,7 +77,7 @@ const ProjectSection = () => {
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto text-center">
-        <h3 className="text-3xl font-bold mb-12">My Projects</h3>
+        <h3 className="text-5xl font-bold text-white mb-9">MY PROJETCS</h3>
         <Slider {...settings}>
           {projects.map((project, index) => (
             <motion.div

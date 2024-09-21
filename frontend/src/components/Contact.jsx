@@ -31,7 +31,7 @@ const ContactForm = () => {
         className="absolute inset-0 object-cover w-full h-full opacity-30"
       /> */}
       <div className="container mx-auto max-w-lg">
-        <h3 className="text-3xl font-bold text-center mb-12">Contact Me</h3>
+        <h3 className="text-center text-5xl font-bold text-white mb-9">CONTACT ME</h3>
         <motion.form
           onSubmit={handleSubmit(onSubmit)}
           initial={{ opacity: 0, y: 50 }}
