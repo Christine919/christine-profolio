@@ -69,7 +69,7 @@ const ContactForm = () => {
             ></textarea>
             {errors.message && <span className="text-red-500 text-sm">This field is required</span>}
           </div>
-          <button type="submit" className="w-full bg-blue-500 text-white p-3 rounded hover:bg-blue-600 transition">
+          <button type="submit" className="w-full bg-pink-500 text-white p-3 rounded hover:bg-pink-600 transition">
             Send Message
           </button>
           {isSubmitSuccessful && <p className="text-green-500 text-center">Thank you for your message!</p>}
