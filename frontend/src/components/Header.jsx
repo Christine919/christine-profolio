@@ -11,10 +11,9 @@ const Header = () => {
   return (
     <header className="fixed w-full bg-white shadow-md z-50">
       <div className="container mx-auto flex justify-between items-center p-4">
-        {/* Logo and Heading */}
         <div className="flex items-center">
-          <img src={Logo} alt="Logo" className="w-8 h-8" /> {/* Adjust size here */}
-          <h1 className="text-xl font-bold">hristine</h1> {/* Heading beside the logo */}
+          <img src={Logo} alt="Logo" className="w-8 h-8" link /> 
+          <h1 className="text-xl font-bold">hristine</h1>
         </div>
         
         {/* Desktop Menu */}

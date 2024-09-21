@@ -37,19 +37,18 @@ const projects = [
 const ProjectSection = () => {
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
-    slidesToShow: 3, // Default for mobile
+    slidesToShow: 3,
     slidesToScroll: 1,
     adaptiveHeight: true,
-    centerMode: true, // Center the slides
-    centerPadding: '50px', // No padding for mobile
     responsive: [
       {
         breakpoint: 640, // Mobile
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode: false, // Disable center mode on mobile
           centerPadding: '0px',
         },
       },
@@ -58,8 +57,8 @@ const ProjectSection = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          centerMode: false,
-          centerPadding: '20px', // Add some space between cards
+          centerMode: false, // Disable center mode for better alignment
+          centerPadding: '10px',
         },
       },
       {
@@ -67,8 +66,8 @@ const ProjectSection = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          centerMode: false,
-          centerPadding: '30px', // Extra space between cards
+          centerMode: false, // Keep center mode off for better alignment
+          centerPadding: '20px', // Adjust padding for space between cards
         },
       },
     ],
@@ -77,7 +76,7 @@ const ProjectSection = () => {
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto text-center">
-        <h3 className="text-5xl font-bold text-white mb-9">MY PROJETCS</h3>
+        <h3 className="text-5xl font-bold text-white mb-9">MY PROJECTS</h3>
         <Slider {...settings}>
           {projects.map((project, index) => (
             <motion.div
@@ -87,7 +86,7 @@ const ProjectSection = () => {
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="mx-4"> {/* Add margin around each card */}
+              <div className="p-4"> {/* Add padding for consistent spacing */}
                 <ProjectCard project={project} />
               </div>
             </motion.div>
