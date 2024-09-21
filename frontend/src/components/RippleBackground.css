@@ -15,7 +15,7 @@
       #ffeb3b, /* Light Yellow */
       #ff6f61  /* Light Coral */
   );
-  animation: ripple 40s infinite ease-in-out;
+  animation: ripple 30s infinite ease-in-out;
   background-size: 400% 400%;
 }
 
