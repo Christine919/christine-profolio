@@ -16,15 +16,36 @@ import profile10 from '../assets/profile10.png';
 const AboutSection = () => {
   const controls = useAnimation();
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
-  const [startTyping, setStartTyping] = useState(false); // State to trigger typewriter
-  const [greeting, setGreeting] = useState('HELLO!');
+  const [startTyping, setStartTyping] = useState(false); 
   const images1 = [profile1, profile4, profile5, profile7, profile8, profile9];
   const images2 = [profile3, profile10, profile6,profile2];
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [currentIndex2, setCurrentIndex2] = useState(0); // For images2
+  const [currentIndex2, setCurrentIndex2] = useState(0); 
+  const [greeting, setGreeting] = useState('HELLO!');
+  const [intro, setIntro] = useState('Curious more about me? Tap the boxes.'); 
+  const [description, setDescription] = useState('A person who passion for creativity and problem-solving.');
+  const [hobby, setHobby] = useState('🥑🍙🍜🥗 Food Enthusiast!');
 
   const handleClick = () => {
     setGreeting((prevGreeting) => (prevGreeting === 'HELLO!' ? '你好' : 'HELLO!'));
+  };
+
+  // Quick Intro click handler
+  const handleIntroClick = () => {
+    setIntro((prevIntro) => (prevIntro === 'Curious more about me? Tap the boxes.' ? 'I am a self-taught full-stack developer from Malaysia.' : 'Curious more about me? Tap the boxes.'));
+  };
+
+  // Self-description click handler
+  const handleDescriptionClick = () => {
+    setDescription((prevDescription) =>
+      prevDescription === 'A person who passion for creativity and problem-solving.'
+        ? "With 5 years of experience in website management, I've honed my skills in building visually appealing and user-friendly websites"
+        : 'A person who passion for creativity and problem-solving.'
+    );
+  };
+
+  const handleHobbyClick = () => {
+    setHobby((prevGreeting) => (prevGreeting === '🥑🍙🍜🥗 Food Enthusiast!' ? '🥽🏊‍♀️👟🏃‍♀ Swim & Run Addict!' : '🥑🍙🍜🥗 Food Enthusiast!'));
   };
 
   useEffect(() => {
@@ -89,13 +110,19 @@ const AboutSection = () => {
             </li>
 
             {/* Greeting Section */}
-            <li className="col-span-2 row-span-2 bg-[#15F5BA] flex justify-center items-center p-8">
-              <p className="text-center font-carter text-[2.5vh] md:text-[7vh] text-[#836FFF]">👋 <br />Quick Intro!</p>
+            <li
+              className="col-span-2 row-span-2 bg-[#15F5BA] flex justify-center items-center p-8 cursor-pointer"
+              onClick={handleIntroClick}
+            >
+              <p className="text-center font-carter text-[1.5vh] md:text-[5vh] text-[#836FFF]">👋 <br />{intro}</p>
             </li>
 
             {/* Self-description Section */}
-            <li className="col-span-2 row-span-3 bg-[#F4FF61] flex justify-center items-center p-8">
-              <p className="text-center font-carter text-[2vh] md:text-[3.5vh] text-[#086972]">“I'm a self-taught full-stack developer from Malaysia.”</p>
+            <li
+              className="col-span-2 row-span-3 bg-[#F3FF4E] flex justify-center items-center p-8 cursor-pointer transition-all duration-300 hover:bg-[#6CFF4E] hover:scale-105 active:scale-95"
+              onClick={handleDescriptionClick}
+            >
+              <p className="text-center font-carter text-[1.3vh] md:text-[3.5vh] ">{description}</p>
             </li>
 
             {/* Profile Image1 Carousel (Auto-Sliding) */}
@@ -155,8 +182,8 @@ const AboutSection = () => {
             </li>
 
             {/* Another Title Section */}
-            <li className="col-span-1 md:row-span-2 bg-[#211951] flex justify-center items-center p-8">
-              <h1 className="font-modak text-[5.5vh] md:text-[24vh] text-white text-center font-semibold">嗨!</h1>
+            <li className="col-span-1 md:row-span-2 bg-[#FF4FC7] flex justify-center items-center p-8 transition-all duration-300 hover:bg-[#FF8D4F] hover:scale-105 active:scale-95" onClick={handleHobbyClick}>
+              <h1 className="font-modak text-[1vh] md:text-[4vh] text-white text-center font-semibold">{hobby}</h1>
             </li>
 
             {/* Subheading Section with Typewriter */}
@@ -165,7 +192,7 @@ const AboutSection = () => {
                 {startTyping && (
                   <p className="text-white text-sm sm:text-base font-poppins">
                     <Typewriter
-                      words={['A lover of the outdoors, I enjoy exploring nature and observing the fascinating behaviors of female creatures.']}
+                      words={["Beyond the digital realm, I'm an outdoor enthusiast who finds inspiration in nature and challenges."]}
                       loop={1}
                       cursor
                       cursorStyle='_'
