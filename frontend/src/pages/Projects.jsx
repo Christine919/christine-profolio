@@ -42,6 +42,7 @@ const ProjectSection = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     adaptiveHeight: true,
+    arrows: false, 
     responsive: [
       {
         breakpoint: 640, // Mobile

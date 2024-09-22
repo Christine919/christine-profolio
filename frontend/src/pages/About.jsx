@@ -86,6 +86,14 @@ const AboutSection = () => {
     setCurrentIndex2((currentIndex2 - 1 + images2.length) % images2.length);
   };
 
+  const handleDragEnd = (event, info) => {
+    if (info.offset.x < -100) {
+      handleNext2(); // Swipe left
+    } else if (info.offset.x > 100) {
+      handlePrev2(); // Swipe right
+    }
+  };  
+
   return (
     <section ref={ref} id="about" className="relative py-20 bg-gray-50 overflow-hidden">
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -114,7 +122,7 @@ const AboutSection = () => {
               className="col-span-2 row-span-2 bg-[#15F5BA] flex justify-center items-center p-8 cursor-pointer"
               onClick={handleIntroClick}
             >
-              <p className="text-center font-carter text-[1.5vh] md:text-[5vh] text-[#836FFF]">👋 <br />{intro}</p>
+              <p className="text-center font-carter text-[2vh] md:text-[5vh] text-[#836FFF]">👋 <br />{intro}</p>
             </li>
 
             {/* Self-description Section */}
@@ -122,7 +130,7 @@ const AboutSection = () => {
               className="col-span-2 row-span-3 bg-[#F3FF4E] flex justify-center items-center p-8 cursor-pointer transition-all duration-300 hover:bg-[#6CFF4E] hover:scale-105 active:scale-95"
               onClick={handleDescriptionClick}
             >
-              <p className="text-center font-carter text-[1.3vh] md:text-[3.5vh] ">{description}</p>
+              <p className="text-center font-carter text-[1.7vh] md:text-[3.5vh] ">{description}</p>
             </li>
 
             {/* Profile Image1 Carousel (Auto-Sliding) */}
@@ -140,7 +148,7 @@ const AboutSection = () => {
             <li className="col-span-3 md:col-span-2 bg-white flex justify-center items-center p-8 shadow-lg">
               <motion.div initial="hidden" animate={controls} variants={textVariants} transition={{ duration: 1 }}>
                 {startTyping && (
-                  <p className="text-[#211951] text-sm sm:text-base font-poppins">
+                  <p className="text-[#211951] text-[1.2vh] sm:text-base font-poppins">
                     <Typewriter
                       words={['My journey into web development began with a passion for design and a desire to understand the technology behind the scenes.']}
                       loop={1}
@@ -157,40 +165,44 @@ const AboutSection = () => {
 
             {/* Another Profile Image1 Carousel */}
             <li className="col-span-3 md:col-span-3 md:row-span-4 bg-[#252A34] flex justify-center items-center">
-            <div className="w-full h-full relative">
-                <img
-                  src={images2[currentIndex2]}
-                  alt="profile2"
-                  className="w-full h-full object-cover shadow-lg transition-opacity duration-1000 ease-in-out"
-                />
-                {/* Navigation Buttons */}
-                <button
-                  className="absolute top-1/2 left-2 transform -translate-y-1/2  text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none"
-                  onClick={handlePrev2}
-                  aria-label="Previous Slide"
-                >
-                  &#10094; {/* Left Arrow */}
-                </button>
-                <button
-                  className="absolute top-1/2 right-2 transform -translate-y-1/2 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none"
-                  onClick={handleNext2}
-                  aria-label="Next Slide"
-                >
-                  &#10095; {/* Right Arrow */}
-                </button>
-              </div>
-            </li>
-
+  <motion.div
+    className="w-full h-full relative"
+    drag="x"
+    dragConstraints={{ left: 0, right: 0 }}
+    onDragEnd={handleDragEnd}
+  >
+    <img
+      src={images2[currentIndex2]}
+      alt="profile2"
+      className="w-full h-full object-cover shadow-lg transition-opacity duration-1000 ease-in-out"
+    />
+    {/* Navigation Buttons */}
+    <button
+      className="absolute top-1/2 left-2 transform -translate-y-1/2 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none"
+      onClick={handlePrev2}
+      aria-label="Previous Slide"
+    >
+      &#10094; {/* Left Arrow */}
+    </button>
+    <button
+      className="absolute top-1/2 right-2 transform -translate-y-1/2 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none"
+      onClick={handleNext2}
+      aria-label="Next Slide"
+    >
+      &#10095; {/* Right Arrow */}
+    </button>
+  </motion.div>
+</li>
             {/* Another Title Section */}
             <li className="col-span-1 md:row-span-2 bg-[#FF4FC7] flex justify-center items-center p-8 transition-all duration-300 hover:bg-[#FF8D4F] hover:scale-105 active:scale-95" onClick={handleHobbyClick}>
-              <h1 className="font-modak text-[1vh] md:text-[4vh] text-white text-center font-semibold">{hobby}</h1>
+              <h1 className="font-modak text-[1.3vh] md:text-[4vh] text-white text-center font-semibold">{hobby}</h1>
             </li>
 
             {/* Subheading Section with Typewriter */}
             <li className="col-span-4 md:col-span-2 md:row-span-2 bg-[#836FFF] flex justify-center items-center p-8">
               <motion.div initial="hidden" animate={controls} variants={textVariants} transition={{ duration: 1 }}>
                 {startTyping && (
-                  <p className="text-white text-sm sm:text-base font-poppins">
+                  <p className="text-white text-[1.3vh] sm:text-base font-poppins">
                     <Typewriter
                       words={["Beyond the digital realm, I'm an outdoor enthusiast who finds inspiration in nature and challenges."]}
                       loop={1}
