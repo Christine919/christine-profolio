@@ -1,31 +1,29 @@
-// src/components/BackToTop.jsx
 import React, { useState, useEffect } from 'react';
-import { ChevronUpIcon } from '@heroicons/react/solid'; // Ensure Heroicons is installed
+import { ChevronUpIcon } from '@heroicons/react/solid'; 
 
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Function to toggle visibility based on scroll position
+  
   const toggleVisibility = () => {
-    if (window.pageYOffset > 300) { // Show after 300px of scrolling
+    if (window.pageYOffset > 300) { 
       setIsVisible(true);
     } else {
       setIsVisible(false);
     }
   };
 
-  // Function to scroll to top
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', // Smooth scrolling
+      behavior: 'smooth', 
     });
   };
 
   useEffect(() => {
     window.addEventListener('scroll', toggleVisibility);
 
-    // Cleanup the event listener on component unmount
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
