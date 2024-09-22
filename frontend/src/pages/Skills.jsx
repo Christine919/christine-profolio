@@ -6,7 +6,6 @@ const skills = [
   { name: 'JavaScript', level: 85 },
   { name: 'Node.js', level: 80 },
   { name: 'CSS', level: 75 },
-  // Add more skills as needed
 ];
 
 const SkillsSection = () => {
@@ -18,13 +17,11 @@ const SkillsSection = () => {
         <div className="max-w-3xl mx-auto space-y-8">
           {skills.map((skill, index) => (
             <div key={index} className="flex flex-col space-y-2">
-              {/* Skill Name and Level */}
               <div className="flex justify-between items-center">
                 <span className="text-lg font-medium">{skill.name}</span>
                 <span className="text-lg font-semibold text-gray-600">{skill.level}%</span>
               </div>
 
-              {/* Skill Progress Bar with Animation */}
               <div className="bg-gray-300 rounded h-4 relative overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}

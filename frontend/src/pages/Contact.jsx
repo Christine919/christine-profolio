@@ -1,9 +1,7 @@
-// src/components/ContactForm.jsx
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
-// import heroImage from '../assets/hero.png';
 
 const ContactForm = () => {
   const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful } } = useForm();
@@ -25,11 +23,6 @@ const ContactForm = () => {
 
   return (
     <section id="contact" className="py-20  px-6">
-      {/* <img
-        src={heroImage}
-        alt="Hero Background"
-        className="absolute inset-0 object-cover w-full h-full opacity-30"
-      /> */}
       <div className="container mx-auto max-w-lg">
         <h3 className="text-center text-5xl font-bold text-white mb-9">CONTACT ME</h3>
         <motion.form
