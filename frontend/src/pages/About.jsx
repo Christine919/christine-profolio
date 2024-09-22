@@ -119,7 +119,7 @@ const AboutSection = () => {
 
             {/* Greeting Section */}
             <li
-              className="col-span-2 row-span-2 bg-[#15F5BA] flex justify-center items-center p-8 cursor-pointer"
+              className="col-span-2 row-span-2 bg-[#15F5BA] flex justify-center items-center p-8 cursor-pointer transition-all duration-300 hover:bg-[#ffd5a1] hover:scale-105 active:scale-95"
               onClick={handleIntroClick}
             >
               <p className="text-center font-carter text-[2vh] md:text-[5vh] text-[#836FFF]">👋 <br />{intro}</p>
