@@ -16,7 +16,7 @@ const projects = [
   },
   {
     title: 'Customer Management System',
-    description: 'This is a CMS web for managing customers, orders, appointments, and more for beauty businesses.',
+    description: 'A details page is included in the CMS. You can log in with admin@gmail.com and password admin1234 to access the CMS pages.',
     image: project_1,
     link: 'https://customer-management-system-livid.vercel.app/',
   },
@@ -42,7 +42,7 @@ const ProjectSection = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     adaptiveHeight: true,
-    arrows: false, 
+    arrows: false,
     responsive: [
       {
         breakpoint: 640, // Mobile
@@ -88,7 +88,9 @@ const ProjectSection = () => {
               viewport={{ once: true }}
             >
               <div className="p-4"> {/* Add padding for consistent spacing */}
-                <ProjectCard project={project} />
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                  <ProjectCard project={project} />
+                </a>
               </div>
             </motion.div>
           ))}

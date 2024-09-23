@@ -114,7 +114,7 @@ const AboutSection = () => {
               className="col-span-3 bg-[#211951] flex justify-center items-center p-8 cursor-pointer transition-all duration-300 hover:bg-[#614BDE] hover:scale-105 active:scale-95"
               onClick={handleClick}
             >
-              <h1 className="font-modak text-[7.5vh] md:text-[21vh] text-white font-semibold">{greeting}</h1>
+              <h1 className="font-modak text-[7.5vh] md:text-[21vh] lg:text-[2vh] text-white font-semibold">{greeting}</h1>
             </li>
 
             {/* Greeting Section */}
