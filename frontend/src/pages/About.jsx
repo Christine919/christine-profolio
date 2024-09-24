@@ -114,7 +114,7 @@ const AboutSection = () => {
               className="col-span-3 bg-[#211951] flex justify-center items-center p-8 cursor-pointer transition-all duration-300 hover:bg-[#614BDE] hover:scale-105 active:scale-95"
               onClick={handleClick}
             >
-              <h1 className="font-modak text-[7.5vh] md:text-[21vh] lg:text-[2vh] text-white font-semibold">{greeting}</h1>
+              <h1 className="font-modak text-[7.5vh] md:text-[5vh] lg:text-[21vh] text-white font-semibold">{greeting}</h1>
             </li>
 
             {/* Greeting Section */}
@@ -122,7 +122,7 @@ const AboutSection = () => {
               className="col-span-2 row-span-2 bg-[#15F5BA] flex justify-center items-center p-8 cursor-pointer transition-all duration-300 hover:bg-[#ffd5a1] hover:scale-105 active:scale-95"
               onClick={handleIntroClick}
             >
-              <p className="text-center font-carter text-[2vh] md:text-[5vh] text-[#836FFF]">👋 <br />{intro}</p>
+              <p className="text-center font-carter text-[2vh] lg:text-[5vh] text-[#836FFF]">👋 <br />{intro}</p>
             </li>
 
             {/* Self-description Section */}
@@ -130,7 +130,7 @@ const AboutSection = () => {
               className="col-span-2 row-span-3 bg-[#F3FF4E] flex justify-center items-center p-8 cursor-pointer transition-all duration-300 hover:bg-[#6CFF4E] hover:scale-105 active:scale-95"
               onClick={handleDescriptionClick}
             >
-              <p className="text-center font-carter text-[1.7vh] md:text-[3.5vh] ">{description}</p>
+              <p className="text-center font-carter text-[1.7vh] lg:text-[3.5vh] ">{description}</p>
             </li>
 
             {/* Profile Image1 Carousel (Auto-Sliding) */}
@@ -195,7 +195,7 @@ const AboutSection = () => {
 </li>
             {/* Another Title Section */}
             <li className="col-span-1 md:row-span-2 bg-[#FF4FC7] flex justify-center items-center p-8 transition-all duration-300 hover:bg-[#FF8D4F] hover:scale-105 active:scale-95" onClick={handleHobbyClick}>
-              <h1 className="font-modak text-[1.3vh] md:text-[4vh] text-white text-center font-semibold">{hobby}</h1>
+              <h1 className="font-modak text-[1.3vh] lg:text-[4vh] text-white text-center font-semibold">{hobby}</h1>
             </li>
 
             {/* Subheading Section with Typewriter */}
