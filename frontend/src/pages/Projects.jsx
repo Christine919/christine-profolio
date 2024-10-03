@@ -16,7 +16,7 @@ const projects = [
   },
   {
     title: 'Customer Management System',
-    description: 'A details page is included in the CMS. You can log in with admin@gmail.com and password admin1234 to access the CMS pages.',
+    description: 'This is a CMS web for managing customers, orders, appointments, and more for beauty businesses.',
     image: project_1,
     link: 'https://customer-management-system-livid.vercel.app/',
   },
