@@ -6,19 +6,26 @@ import project_1 from '../assets/project_1.png';
 import project_2 from '../assets/project_2.png';
 import project_3 from '../assets/project_3.png';
 import project_4 from '../assets/project_4.png';
+import project_5 from '../assets/project_5.png';
 
 const projects = [
   {
-    title: 'Luxestay Hotel',
-    description: 'A modern and elegant hotel booking platform with a sleek design, offering a seamless user experience for travelers.',
-    image: project_4,
-    link: 'https://luxestay-ten.vercel.app/',
+    title: 'AquaForma Web Solutions',
+    description: 'A sleek, one-page site with a black base, purple-blue gradient, and refined animations for a modern, engaging look.',
+    image: project_5,
+    link: 'https://www.aquaforma-web.com/',
   },
   {
     title: 'Customer Management System',
     description: 'This is a CMS web for managing customers, orders, appointments, and more for beauty businesses.',
     image: project_1,
     link: 'https://customer-management-system-livid.vercel.app/',
+  },
+  {
+    title: 'Luxestay Hotel',
+    description: 'A modern and elegant hotel booking platform with a sleek design, offering a seamless user experience for travelers.',
+    image: project_4,
+    link: 'https://luxestay-ten.vercel.app/',
   },
   {
     title: 'Memory Melody ',

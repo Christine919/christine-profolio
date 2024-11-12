@@ -20,13 +20,13 @@ const HeroSection = () => {
         className="text-center text-white p-4 relative z-10"
       >
         <h1 className='text-4xl md:text-6xl font-bold mb-8'>WELCOME</h1>
-        <h2 className="text-4xl md:text-6xl font-bold mb-4 animate-bounce">Hello, I'm Christine</h2>
-        <p className="text-xl md:text-2xl mb-6">A Full-Stack Developer</p>
+        <h2 className="text-4xl md:text-6xl font-bold mb-4 animate-bounce">Hello! I'm Christine!</h2>
+        <p className="text-xl md:text-2xl mb-6">A Full Stack Developer</p>
         <a
           href="#projects"
           className="mt-6 inline-block bg-white text-blue-600 px-6 py-3 rounded-full shadow-lg hover:bg-gray-100 transition transform hover:scale-105"
         >
-          View My Work
+          View Projects
         </a>
       </motion.div>
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
