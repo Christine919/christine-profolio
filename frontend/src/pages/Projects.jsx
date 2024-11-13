@@ -7,6 +7,7 @@ import project_2 from '../assets/project_2.png';
 import project_3 from '../assets/project_3.png';
 import project_4 from '../assets/project_4.png';
 import project_5 from '../assets/project_5.png';
+import project_6 from '../assets/project_6.png';
 
 const projects = [
   {
@@ -20,6 +21,12 @@ const projects = [
     description: 'This is a CMS web for managing customers, orders, appointments, and more for beauty businesses.',
     image: project_1,
     link: 'https://customer-management-system-livid.vercel.app/',
+  },
+  {
+    title: 'Agensi Pekerjaan U-Jing Sdn Bhd',
+    description: 'A one-page minimalist site for a household service company with a warm theme, and secure employee info.',
+    image: project_6,
+    link: 'https://www.u-jing.com/',
   },
   {
     title: 'Luxestay Hotel',
